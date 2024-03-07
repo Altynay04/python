@@ -3,7 +3,7 @@
 import re
 
 def snakeToCamel(text):
-    words = text.split('_')
+    words = text.split('_')   #Returns a list where the string has been split at each match
     CamelString= words[0]
     for char in words[1:]:
         CamelString += char.capitalize()
