@@ -26,24 +26,24 @@ while not done:
     screen.blit(image, mik_rec)
     screen.blit(time_render, (10, 10))
     
-    # Calculate the angle for the second hand
+    # здесь рассчитала угол секундной стрелки
     angle = (time.second / 60) * 360
     
-    # Rotate the second hand image
+    # вращение картинки секундной стрекли 
     rotated_image = pygame.transform.rotate(sec, -angle)
     
-    # Get the rect of the rotated image and center it
+    # отцентрировала остальную часть повернутой картиники
     rotated_rect = rotated_image.get_rect(center=mik_sec.center)
     
-    # Blit the rotated image onto the screen
+    # Вывела повернутую картинку на экран
     screen.blit(rotated_image, rotated_rect)
     minute_angle = ((time.minute + time.second / 60) / 60) * 360
     rotated_minute = pygame.transform.rotate(minute, -minute_angle)
     
-    # Get the rect of the rotated minute hand image and center it
+    # Получила остальную часть повернутой кратинки минутной стрелки и отцентрировала её
     rotated_minute_rect = rotated_minute.get_rect(center=mik_min.center)
     
-    # Blit the rotated minute hand image onto the screen
+    # Вывела на экран картинку повернутой минутной стрелки
     screen.blit(rotated_minute, rotated_minute_rect)
 
     pygame.display.flip()
