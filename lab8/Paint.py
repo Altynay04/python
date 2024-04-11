@@ -6,22 +6,22 @@ pygame.init()
 # Constants
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
-BG_COLOR = (255, 255, 255)
+BG_COLOR = (255, 0, 255)
 BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
+GREEN = (0, 255, 0)
 YELLOW = (255, 255, 0)
+RED = (255, 0, 0)
 CYAN = (0, 255, 255)
 MAGENTA = (255, 0, 255)
 GRAY = (128, 128, 128)
-COLORS = [BG_COLOR, BLACK, RED, GREEN, BLUE, YELLOW, CYAN, MAGENTA, GRAY]
+COLORS = [BG_COLOR, BLACK, RED, GREEN, BLUE, YELLOW, CYAN, GRAY, MAGENTA]
 
 # Variables
 drawing = False
 last_pos = None
 radius = 10
-color = BLACK
+color = GREEN
 bg_color = BG_COLOR
 
 # Set up the display

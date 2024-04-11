@@ -28,7 +28,7 @@ font = pygame.font.SysFont("Verdana", 60)
 font_small = pygame.font.SysFont("Verdana", 20)
 game_over = font.render("Game Over", True, BLACK)
 
-background = pygame.image.load(r'C:\Users\alser\Desktop\repositories\work\lab8\AnimatedStreet.png')  #загружаем фон
+background = pygame.image.load(r'C:\Users\Асембек\Desktop\python\lab8\AnimatedStreet.png')  #загружаем фон
 
 #Создание белого экрана
 DISPLAYSURF = pygame.display.set_mode((400,600))
@@ -36,10 +36,10 @@ DISPLAYSURF.fill(WHITE)
 pygame.display.set_caption("Racer")
 
 
-class Enemy(pygame.sprite.Sprite): #Simple base class for visible game objects.
+class Enemy(pygame.sprite.Sprite): #Simple base class for visible game objects. Спрайт это все анимированные объекты
     def __init__(self):
         super().__init__() #вызывает sprite (parent class of enemy)
-        self.image = pygame.image.load(r'C:\Users\alser\Desktop\repositories\work\lab8\Enemy.png')
+        self.image = pygame.image.load(r'C:\Users\Асембек\Desktop\python\lab8\Enemy.png')
         self.rect = self.image.get_rect() 
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0) #центрирует объект в рандомной координате 
 
@@ -54,7 +54,7 @@ class Enemy(pygame.sprite.Sprite): #Simple base class for visible game objects.
 class Monet(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load(r'C:\Users\alser\Desktop\repositories\work\lab8\Monet.png')
+        self.image = pygame.image.load(r'C:\Users\Асембек\Desktop\python\lab8\Coin.png')
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40,SCREEN_WIDTH-40), 0)
 
@@ -71,7 +71,7 @@ class Monet(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load(r'C:\Users\alser\Desktop\repositories\work\lab8\Player.png')
+        self.image = pygame.image.load(r'C:\Users\Асембек\Desktop\python\lab8\Player.png')
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
        
